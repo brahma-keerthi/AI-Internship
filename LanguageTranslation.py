@@ -103,6 +103,7 @@ def build_model(in_vocab, out_vocab, in_timesteps, out_timesteps, units):
   model = build_model(deu_vocab_size, eng_vocab_size, deu_length, eng_length, 512)
 rms = optimizers.RMSprop(lr=0.001)
 #model.compile(loss='sparse_categorial_crossentropy', optimizers=rms)
+
 model.compile(optimizer=rms, loss='sparse_categorical_crossentropy', metrics=None)
 
 filename = 'model.Kunal'
